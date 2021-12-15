@@ -4,13 +4,23 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import SideBarOption from "./SideBarOption";
+import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 function SideBar() {
   const sideBarObj = [
     ["Home", <HomeIcon />],
     ["Explore", <SearchIcon />],
     ["Notifications", <NotificationsNoneIcon />],
+    ["Messages", <MailOutlineIcon />],
+    ["Bookmarks", <BookmarkBorderIcon />],
+    ["Lists", <ListAltIcon />],
+    ["Profile", <PermIdentityIcon />],
+    ["More", <MoreHorizIcon />],
   ];
   return (
     <div className="sidebar">
