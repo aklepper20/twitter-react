@@ -10,10 +10,11 @@ import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import Button from "@mui/material/Button";
 
 function SideBar() {
   const sideBarObj = [
-    ["Home", <HomeIcon />],
+    ["Home", <HomeIcon />, "sidebarOption--active"],
     ["Explore", <SearchIcon />],
     ["Notifications", <NotificationsNoneIcon />],
     ["Messages", <MailOutlineIcon />],
@@ -26,8 +27,11 @@ function SideBar() {
     <div className="sidebar">
       <TwitterIcon />
       {sideBarObj.map((obj) => {
-        return <SideBarOption text={obj[0]} Icon={obj[1]} />;
+        return <SideBarOption text={obj[0]} Icon={obj[1]} active={obj[2]} />;
       })}
+      <Button variant="outlined" className="sidebar__tweet" sx={{ width: 1 }}>
+        Tweet
+      </Button>
     </div>
   );
 }
