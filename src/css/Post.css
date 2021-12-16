@@ -24,6 +24,13 @@
   padding: 10px;
 }
 
+.post__body > img {
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
 .post__footer {
   display: flex;
   justify-content: space-between;

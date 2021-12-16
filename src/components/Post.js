@@ -7,28 +7,28 @@ import PublishIcon from "@mui/icons-material/Publish";
 import React from "react";
 import "../css/Post.css";
 
-function Post({ displayName, userName, verified, text, image, avatar }) {
+function Post({ displayName, username, verified, text, image, avatar }) {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar alt="Avatar Profile Image" />
+        <Avatar src={avatar} alt="Avatar Profile Image" />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Alyyyy
+              {displayName}{" "}
               <span className="post_headerSpecial">
-                <CheckCircleIcon className="post__badge" />
-                @bait
+                {verified && <CheckCircleIcon className="post__badge" />}@
+                {username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>I am a tweet!!!</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img src="" alt="gif" />
+        <img src={image} alt="gif" />
         <div className="post__footer">
           <ChatBubbleOutlineIcon fontSize="small" />
           <RepeatIcon fontSize="small" />
